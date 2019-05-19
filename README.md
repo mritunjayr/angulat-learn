@@ -1,5 +1,4 @@
-![alt text](https://travis-ci.org/mritunjayr/angulat-learn.svg?branch=master)
-
+[![Build Status](https://travis-ci.org/mritunjayr/angulat-learn.svg?branch=master)](https://travis-ci.org/mritunjayr/angulat-learn)
 
 # MyApp
 
