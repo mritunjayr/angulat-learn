@@ -5,7 +5,7 @@ import {products} from '../products';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit{
 
   products = products;
 
@@ -15,6 +15,9 @@ export class ProductListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  onNotify() {
+    window.alert('You will be notified when the product goes on sale');
   }
 
 }
