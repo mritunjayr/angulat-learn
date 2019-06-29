@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import {HttpClientTestingModule,HttpTestingController} from '@angular/common/http/testing'
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +12,7 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
+import { CartService } from './cart.service';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,9 @@ import { ShippingComponent } from './shipping/shipping.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    HttpClientTestingModule,
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

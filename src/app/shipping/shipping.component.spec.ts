@@ -1,16 +1,35 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ShippingComponent } from './shipping.component';
+import { ShippingComponent } from "./shipping.component";
+import { CartComponent } from "../cart/cart.component";
+import { ProductListComponent } from "../product-list/product-list.component";
+import { ProductDetailsComponent } from "../product-details/product-details.component";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { AppRoutingModule } from "../app-routing.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { RouterTestingModule } from "@angular/router/testing";
+import { ProductAlertsComponent } from "../product-alerts/product-alerts.component";
 
-describe('ShippingComponent', () => {
+describe("ShippingComponent", () => {
   let component: ShippingComponent;
   let fixture: ComponentFixture<ShippingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShippingComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        ShippingComponent,
+        CartComponent,
+        ProductListComponent,
+        ProductDetailsComponent,
+        ShippingComponent,
+        ProductAlertsComponent
+      ],
+      imports: [
+        HttpClientTestingModule,
+        RouterTestingModule,
+        ReactiveFormsModule
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +38,7 @@ describe('ShippingComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
